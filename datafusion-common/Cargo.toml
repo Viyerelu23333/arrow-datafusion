@@ -38,8 +38,8 @@ pyarrow = ["pyo3"]
 jit = ["cranelift-module"]
 
 [dependencies]
-arrow = { version = "10.0", features = ["prettyprint"] }
-parquet = { version = "10.0", features = ["arrow"], optional = true }
+arrow = { path = "../../arrow/arrow", version = "10.0", features = ["prettyprint"] }
+parquet = { path = "../../arrow/parquet", version = "10.0", features = ["arrow"], optional = true }
 avro-rs = { version = "0.13", features = ["snappy"], optional = true }
 pyo3 = { version = "0.16", optional = true }
 sqlparser = "0.15"
